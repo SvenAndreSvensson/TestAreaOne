@@ -41,6 +41,15 @@ struct ContentView: View {
                         description: "Transition, rotationEffect"
                     )
                 }
+
+                NavigationLink(destination: GitContent()) {
+                    createTestAreaOneListItem(
+                        title: "git reset HEAD^",
+                        systemName: "pencil",
+                        description: "Testing git reset HEAD^, so just some feiles that changes - etc.."
+                    )
+                }
+
             }
         }
     }
