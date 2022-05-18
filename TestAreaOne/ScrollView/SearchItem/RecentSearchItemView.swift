@@ -2,94 +2,53 @@ import SwiftUI
 
 protocol RecentSearchItemViewActions {
     func deleteRecent(item: SearchItem)
-    func saveRecent(item:SearchItem)
+    func saveRecent(item: SearchItem)
 }
 
 struct RecentSearchItemView: View {
-    @Environment(\.dismiss) private var dismiss
-
     @Binding var item: SearchItem
     var actions: RecentSearchItemViewActions?
     let namespace: Namespace.ID
 
-    @State private var showingPopover = false
-    @State private var name: String = "hei"
-
-    @State private var animationAmount: CGFloat = 1
-
     @ViewBuilder
     var body: some View {
-        Group {
+//        Group {
         switch item.state {
         case .searchable:
             NavigationLink {
                 Text(item.title)
             } label: {
-                searchItem
-                    .contextMenu { menu }
+                SearchItemView(item: $item, namespace: namespace)
             }
+            .overlay(alignment: .topTrailing, content: { overlay })
+            .transition(.scale.combined(with: .opacity))
+            .contextMenu { menuItems }
 
         default:
-            searchItem
-
+            SearchItemView(item: $item, namespace: namespace)
+                .transition(.scale.combined(with: .opacity))
         }
-        }
-        .matchedGeometryEffect(id: "\(item.id)", in: namespace)
-        .transition(.scale.combined(with: .opacity))
-
+//        }
+//        .matchedGeometryEffect(id: "\(item.id)", in: namespace)
     }
 
-    var searchItem: some View {
-        VStack(alignment: .leading, spacing: .spacingS) {
-            title
-            description
-            image
-        }
-        .padding()
-        .background(Color.gray.opacity(0.1))
-        .frame(width: 160)
-        .card()
-    }
-
-    var title: some View {
-        Text(item.title)
-            .font(.body)
-    }
-    var description: some View {
-        Text(item.description)
-            .font(.caption)
-    }
-
-    @ViewBuilder
-    var image: some View {
-        HStack(spacing: .spacingS) {
-            Spacer()
-            switch item.state {
-            case .searchable:
-                Image(systemName: item.icon)
-
-            case .saving:
-                Image(systemName: "heart")
+    var overlay: some View {
+        Menu { menuItems } label: {
+            ZStack(alignment: .topTrailing) {
+                Image(systemName: "target")
                     .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.red)
-                    .scaleEffect(animationAmount)
-                    .animation(
-                        .linear(duration: 0.1)
-                        .delay(0.2)
-                        .repeatForever(autoreverses: true),
-                        value: animationAmount)
-                    .onAppear {
-                        animationAmount = 1.2
-                    }
-
-            default:
-                ProgressView()
+                    .border(.red)
+                    .opacity(0.005)
+                Image(systemName: "ellipsis")
+                    .padding(.vertical, .spacingXS)
+                    .padding(.horizontal, .spacingL)
+                    .foregroundColor(.onSurfacePrimary)
             }
+            .frame(width: 50, height: 50, alignment: .center)
         }
     }
 
-    var menu: some View {
+    var menuItems: some View {
         Group {
             Button {
                 item.state = .deleting
@@ -102,7 +61,7 @@ struct RecentSearchItemView: View {
             Button {
                 item.state = .saving
                 withAnimation {
-                actions?.saveRecent(item: item)
+                    actions?.saveRecent(item: item)
                 }
             } label: {
                 Label("Save", systemImage: "heart")

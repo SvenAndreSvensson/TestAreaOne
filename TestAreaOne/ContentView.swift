@@ -22,20 +22,24 @@ struct ContentView: View {
                             .init(id: "4", title: "Kari"),
                             .init(id: "5", title: "Knut"),
                             .init(id: "6", title: "Per"),
-                        ])
+                        ],
+                        suggestedItem: .init(id: "suggested nr 1", title: "if you never, you can try")
+                    )
                     )
                 } label: {
                     createTestAreaOneListItem(
                         title: "Scrollview",
                         systemName: "scroll",
-                        description: "Scrollview, clipping, contextmenu, card with shadow ")
+                        description: "Scrollview, clipping, contextmenu, card with shadow "
+                    )
                 }
 
                 NavigationLink(destination: TransactionExampleView()) {
                     createTestAreaOneListItem(
                         title: "Transaction",
                         systemName: "film",
-                        description: "Transition, rotationEffect")
+                        description: "Transition, rotationEffect"
+                    )
                 }
             }
         }
