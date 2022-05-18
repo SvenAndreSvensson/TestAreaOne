@@ -9,10 +9,8 @@ import SwiftUI
 
 struct GitContent: View {
     var body: some View {
-        VStack {
         Text("Hello, World!, testing git reset HEAD^, what does it mean")
             .padding()
-        Text("new")
     }
 }
 
