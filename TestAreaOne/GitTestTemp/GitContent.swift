@@ -13,7 +13,7 @@ struct GitContent: View {
             Text("Hello, World!, testing git reset HEAD^, what does it mean")
                 .padding()
 
-            Text("new")
+            Text("hello again")
         }
     }
 }
