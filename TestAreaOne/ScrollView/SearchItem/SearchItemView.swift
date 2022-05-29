@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SearchItemView: View {
-    @Binding var item: SearchItem
+    var item: SearchItem
     var width: CGFloat? = 160
     let namespace: Namespace.ID
 
@@ -17,6 +17,7 @@ struct SearchItemView: View {
         .background(Color.gray.opacity(0.1))
         .frame(width: width)
         .card()
+        .id(item.id)
         .matchedGeometryEffect(id: "\(item.id)", in: namespace)
     }
 
@@ -63,6 +64,6 @@ struct SearchItemView: View {
 struct SearchItemView_Previews: PreviewProvider {
     @Namespace static var namespace
     static var previews: some View {
-        SearchItemView(item: .constant(.mock4), namespace: namespace)
+        SearchItemView(item: .mock4, namespace: namespace)
     }
 }

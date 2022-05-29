@@ -60,7 +60,7 @@ extension SearchItemsViewModel: RecentSearchItemViewActions {
         Task { @MainActor in
             do {
                 // set item state
-                // setRecentState(for: item, to: .deleting)
+                setRecentState(for: item, to: .deleting)
 
                 try await Task.sleep(nanoseconds: 2_000_000_000)
 
@@ -76,7 +76,7 @@ extension SearchItemsViewModel: RecentSearchItemViewActions {
         Task { @MainActor in
             do {
                 // set item state
-                // setRecentState(for: item, to: .saving)
+                 setRecentState(for: item, to: .saving)
 
                 try await Task.sleep(nanoseconds: 2_000_000_000)
                 guard let item = removeRecent(item) else {
@@ -86,7 +86,6 @@ extension SearchItemsViewModel: RecentSearchItemViewActions {
 
                 insertSaved(item)
 
-                try await Task.sleep(nanoseconds: 1_000_000_000)
                 setSavedState(for: item, to: .searchable)
 
             } catch {

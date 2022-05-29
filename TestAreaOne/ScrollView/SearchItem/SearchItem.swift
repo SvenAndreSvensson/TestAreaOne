@@ -22,17 +22,11 @@ extension SearchItem {
     }
 }
 
-extension SearchItem: Hashable, Equatable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-//        hasher.combine(title)
-//        hasher.combine(description)
-//        hasher.combine(state)
-    }
+extension SearchItem: Equatable {
 
     static func == (lhs: SearchItem, rhs: SearchItem) -> Bool {
-        lhs.id == rhs.id // &&
-//        lhs.title == rhs.title &&
+        lhs.id == rhs.id  && lhs.state == rhs.state
+//         && lhs.title == rhs.title
 //        lhs.description == rhs.description &&
 //        lhs.state == rhs.state
     }
