@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26A5E7422843D3E90019CD3E /* TextA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5E7412843D3E90019CD3E /* TextA.swift */; };
 		26AA3EB328256FE200E734B4 /* TestAreaOneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AA3EB228256FE200E734B4 /* TestAreaOneApp.swift */; };
 		26AA3EB528256FE200E734B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AA3EB428256FE200E734B4 /* ContentView.swift */; };
 		26AA3EB728256FE300E734B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26AA3EB628256FE300E734B4 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26A5E7412843D3E90019CD3E /* TextA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextA.swift; sourceTree = "<group>"; };
 		26AA3EAF28256FE200E734B4 /* TestAreaOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAreaOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AA3EB228256FE200E734B4 /* TestAreaOneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAreaOneApp.swift; sourceTree = "<group>"; };
 		26AA3EB428256FE200E734B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26A5E7402843D39C0019CD3E /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				26A5E7412843D3E90019CD3E /* TextA.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		26AA3EA628256FE200E734B4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 			children = (
 				26AA3EB228256FE200E734B4 /* TestAreaOneApp.swift */,
 				26AA3EB428256FE200E734B4 /* ContentView.swift */,
+				26A5E7402843D39C0019CD3E /* Text */,
 				26AA3EC0282570C800E734B4 /* ScrollView */,
 				26C5D1D9282666C1002BCA29 /* Animation */,
 				26AA3ED82825EAA100E734B4 /* Components */,
@@ -266,6 +277,7 @@
 				26AA3ED3282598CE00E734B4 /* View+cardShadow.swift in Sources */,
 				26AA3EDA2825EABA00E734B4 /* CustomAlertWithTextField.swift in Sources */,
 				26AA3ECF2825980800E734B4 /* CGFloat+spacing.swift in Sources */,
+				26A5E7422843D3E90019CD3E /* TextA.swift in Sources */,
 				26C5D1DB282666CD002BCA29 /* TransactionExampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
