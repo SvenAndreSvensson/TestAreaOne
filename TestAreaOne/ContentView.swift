@@ -49,6 +49,14 @@ struct ContentView: View {
                         description: "part of a test"
                     )
                 }
+
+                NavigationLink(destination: TextBView()) {
+                    createTestAreaOneListItem(
+                        title: "Text B",
+                        systemName: "text.bubble",
+                        description: "part of a test"
+                    )
+                }
             }
         }
     }
