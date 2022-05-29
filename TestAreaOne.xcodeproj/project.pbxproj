@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		261893B62843E54900AFB448 /* AText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261893B52843E54900AFB448 /* AText.swift */; };
+		261893B82843E65700AFB448 /* BText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261893B72843E65700AFB448 /* BText.swift */; };
 		2658A1202843D71A00DDD6B6 /* TextB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A11F2843D71A00DDD6B6 /* TextB.swift */; };
 		26A5E7422843D3E90019CD3E /* TextA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5E7412843D3E90019CD3E /* TextA.swift */; };
 		26AA3EB328256FE200E734B4 /* TestAreaOneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AA3EB228256FE200E734B4 /* TestAreaOneApp.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		261893B52843E54900AFB448 /* AText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AText.swift; sourceTree = "<group>"; };
+		261893B72843E65700AFB448 /* BText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BText.swift; sourceTree = "<group>"; };
 		2658A11F2843D71A00DDD6B6 /* TextB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextB.swift; sourceTree = "<group>"; };
 		26A5E7412843D3E90019CD3E /* TextA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextA.swift; sourceTree = "<group>"; };
 		26AA3EAF28256FE200E734B4 /* TestAreaOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAreaOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				26A5E7412843D3E90019CD3E /* TextA.swift */,
 				2658A11F2843D71A00DDD6B6 /* TextB.swift */,
 				261893B52843E54900AFB448 /* AText.swift */,
+				261893B72843E65700AFB448 /* BText.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				26AA3ECD282596D700E734B4 /* ColorName.swift in Sources */,
 				26C5D1D42826515F002BCA29 /* SearchItem.swift in Sources */,
 				26AA3EC22825755D00E734B4 /* SearchItemsView.swift in Sources */,
+				261893B82843E65700AFB448 /* BText.swift in Sources */,
 				2658A1202843D71A00DDD6B6 /* TextB.swift in Sources */,
 				26AA3EB528256FE200E734B4 /* ContentView.swift in Sources */,
 				26C5D1DD2827B9DC002BCA29 /* SearchItemView.swift in Sources */,
