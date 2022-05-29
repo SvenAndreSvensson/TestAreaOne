@@ -3,10 +3,12 @@ import Foundation
 class SearchItemsViewModel: ObservableObject {
     @Published var recentItems: [SearchItem]
     @Published var savedItems: [SearchItem]
+    @Published var suggestedItem: SearchItem
 
-    init(recentItems: [SearchItem] = [], savedItems: [SearchItem] = []) {
+    init(recentItems: [SearchItem] = [], savedItems: [SearchItem] = [], suggestedItem: SearchItem? = nil) {
         self.recentItems = recentItems
         self.savedItems = savedItems
+        self.suggestedItem = suggestedItem ?? .zero
     }
 }
 
@@ -42,14 +44,14 @@ extension SearchItemsViewModel {
 
     func insertSaved(_ item: SearchItem) {
         savedItems.insert(item, at: 0)
-        //savedItems[0].state = .searchable
+        // savedItems[0].state = .searchable
     }
 }
 
 extension SearchItemsViewModel: Equatable {
     static func == (lhs: SearchItemsViewModel, rhs: SearchItemsViewModel) -> Bool {
         lhs.recentItems == rhs.recentItems &&
-        lhs.savedItems == rhs.savedItems
+            lhs.savedItems == rhs.savedItems
     }
 }
 
@@ -58,7 +60,7 @@ extension SearchItemsViewModel: RecentSearchItemViewActions {
         Task { @MainActor in
             do {
                 // set item state
-                //setRecentState(for: item, to: .deleting)
+                setRecentState(for: item, to: .deleting)
 
                 try await Task.sleep(nanoseconds: 2_000_000_000)
 
@@ -74,8 +76,7 @@ extension SearchItemsViewModel: RecentSearchItemViewActions {
         Task { @MainActor in
             do {
                 // set item state
-                //setRecentState(for: item, to: .saving)
-
+                 setRecentState(for: item, to: .saving)
 
                 try await Task.sleep(nanoseconds: 2_000_000_000)
                 guard let item = removeRecent(item) else {
@@ -85,7 +86,6 @@ extension SearchItemsViewModel: RecentSearchItemViewActions {
 
                 insertSaved(item)
 
-                try await Task.sleep(nanoseconds: 1_000_000_000)
                 setSavedState(for: item, to: .searchable)
 
             } catch {
@@ -130,10 +130,4 @@ extension SearchItemsViewModel: SavedSearchItemViewActions {
             }
         }
     }
-
-
 }
-
-
-
-
