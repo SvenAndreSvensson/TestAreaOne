@@ -101,6 +101,7 @@
 				26AA3ED82825EAA100E734B4 /* Components */,
 				26AA3ED42825994F00E734B4 /* Sources */,
 				26AA3EB828256FE300E734B4 /* Preview Content */,
+				26A5E73E2843A25C0019CD3E /* fileA.swift */,
 			);
 			path = TestAreaOne;
 			sourceTree = "<group>";
@@ -274,6 +275,7 @@
 				26AA3EC5282591AC00E734B4 /* View+card.swift in Sources */,
 				26C5D1DF2827CBE5002BCA29 /* SuggestedSearchItemView.swift in Sources */,
 				26AA3EB328256FE200E734B4 /* TestAreaOneApp.swift in Sources */,
+				26A5E73F2843A25C0019CD3E /* fileA.swift in Sources */,
 				26AA3ED3282598CE00E734B4 /* View+cardShadow.swift in Sources */,
 				26AA3EDA2825EABA00E734B4 /* CustomAlertWithTextField.swift in Sources */,
 				26AA3ECF2825980800E734B4 /* CGFloat+spacing.swift in Sources */,
