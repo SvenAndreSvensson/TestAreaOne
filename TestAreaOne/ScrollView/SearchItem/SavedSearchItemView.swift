@@ -6,7 +6,7 @@ protocol SavedSearchItemViewActions {
 }
 
 struct SavedSearchItemView: View {
-    @Binding var item: SearchItem
+    var item: SearchItem
     var actions: SavedSearchItemViewActions?
     let namespace: Namespace.ID
 
@@ -14,24 +14,15 @@ struct SavedSearchItemView: View {
     @State private var name: String = ""
 
     var body: some View {
-        Group {
-            switch item.state {
-            case .searchable:
-                NavigationLink {
-                    Text(item.title)
-                } label: {
-                    SearchItemView(item: $item, namespace: namespace)
-                }
-                .overlay(overlay, alignment: .topTrailing)
-                .transition(.scale.combined(with: .opacity))
-                .contextMenu { menuItems }
 
-            default:
-                SearchItemView(item: $item, namespace: namespace)
-                    .transition(.scale.combined(with: .opacity))
-            }
+        NavigationLink {
+            Text(item.title)
+        } label: {
+            SearchItemView(item: item, namespace: namespace)
         }
+        .overlay(iconMenu, alignment: .topTrailing)
         .sheet(isPresented: $showingPopover) { popOver }
+        .disabled(item.state != .searchable)
     }
 
     var menuItems: some View {
@@ -45,7 +36,7 @@ struct SavedSearchItemView: View {
         }
     }
 
-    var overlay: some View {
+    var iconMenu: some View {
         Menu { menuItems } label: {
             ZStack(alignment: .topTrailing) {
                 Image(systemName: "target")
@@ -89,6 +80,6 @@ struct SavedSearchItemView: View {
 struct SavedSearchItemView_Previews: PreviewProvider {
     @Namespace static var namespace
     static var previews: some View {
-        SavedSearchItemView(item: .constant(.mock4), namespace: namespace)
+        SavedSearchItemView(item: .mock4, namespace: namespace)
     }
 }
