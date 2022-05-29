@@ -8,11 +8,11 @@ struct TransactionExampleView: View {
             HStack(spacing: 30) {
                 Text("Rotation")
                     .rotationEffect(Angle(degrees:
-                                            self.flag ? 360 : 0))
+                        self.flag ? 360 : 0))
 
                 Text("Rotation\nModified")
                     .rotationEffect(Angle(degrees:
-                                            self.flag ? 360 : 0))
+                        self.flag ? 360 : 0))
                     .transaction { view in
                         view.animation =
                             view.animation?.delay(2.0).speed(2)
@@ -20,12 +20,13 @@ struct TransactionExampleView: View {
 
                 Text("Animation\nReplaced")
                     .rotationEffect(Angle(degrees:
-                                            self.flag ? 360 : 0))
+                        self.flag ? 360 : 0))
                     .transaction { view in
                         view.animation = .interactiveSpring(
                             response: 0.60,
                             dampingFraction: 0.20,
-                            blendDuration: 0.25)
+                            blendDuration: 0.25
+                        )
                     }
             }
 
@@ -37,6 +38,7 @@ struct TransactionExampleView: View {
         }
     }
 }
+
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         TransactionExampleView()

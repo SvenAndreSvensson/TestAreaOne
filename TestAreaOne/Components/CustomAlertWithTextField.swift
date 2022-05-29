@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct CustomAlertWithTextField: View {
-
     @State var isShowingEditField = false
     @State var text: String = "12345"
 
@@ -52,5 +51,4 @@ struct CustomAlertWithTextField: View {
             .opacity(self.isShowingEditField ? 1.0 : 0.0)
         }
     }
-
 }
