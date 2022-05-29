@@ -79,11 +79,11 @@
 		26AA3EB128256FE200E734B4 /* TestAreaOne */ = {
 			isa = PBXGroup;
 			children = (
-				26AA3ED82825EAA100E734B4 /* Components */,
 				26AA3EB228256FE200E734B4 /* TestAreaOneApp.swift */,
 				26AA3EB428256FE200E734B4 /* ContentView.swift */,
 				26AA3EC0282570C800E734B4 /* ScrollView */,
 				26C5D1D9282666C1002BCA29 /* Animation */,
+				26AA3ED82825EAA100E734B4 /* Components */,
 				26AA3ED42825994F00E734B4 /* Sources */,
 				26AA3EB828256FE300E734B4 /* Preview Content */,
 			);
