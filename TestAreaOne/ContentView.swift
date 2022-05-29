@@ -41,6 +41,14 @@ struct ContentView: View {
                         description: "Transition, rotationEffect"
                     )
                 }
+
+                NavigationLink(destination: TextAView()) {
+                    createTestAreaOneListItem(
+                        title: "Text A",
+                        systemName: "text.bubble",
+                        description: "part of a test"
+                    )
+                }
             }
         }
     }
