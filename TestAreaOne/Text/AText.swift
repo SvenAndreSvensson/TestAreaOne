@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct TextEView: View {
+struct ATextView: View {
     var body: some View {
-        Text("E")
+        Text("A text")
     }
 }
