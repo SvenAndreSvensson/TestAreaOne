@@ -52,6 +52,30 @@ struct ContentView: View {
 
                 NavigationLink(destination: TextBView()) {
                     createTestAreaOneListItem(
+                        title: "Text X",
+                        systemName: "text.bubble",
+                        description: "Cherry pick"
+                    )
+                }
+
+                NavigationLink(destination: TextBView()) {
+                    createTestAreaOneListItem(
+                        title: "Bad 1",
+                        systemName: "text.bubble",
+                        description: "bad 1"
+                    )
+                }
+
+                NavigationLink(destination: TextBView()) {
+                    createTestAreaOneListItem(
+                        title: "Text Y",
+                        systemName: "text.bubble",
+                        description: "cherry pick 2"
+                    )
+                }
+
+                NavigationLink(destination: TextBView()) {
+                    createTestAreaOneListItem(
                         title: "Text B",
                         systemName: "text.bubble",
                         description: "part of a test"
