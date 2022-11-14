@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2658A1202843D71A00DDD6B6 /* TextB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A11F2843D71A00DDD6B6 /* TextB.swift */; };
 		26A5E7422843D3E90019CD3E /* TextA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5E7412843D3E90019CD3E /* TextA.swift */; };
+		26A65CF228F7E7B800C0BF3E /* HashableStructWithFuncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A65CF128F7E7B800C0BF3E /* HashableStructWithFuncView.swift */; };
 		26AA3EB328256FE200E734B4 /* TestAreaOneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AA3EB228256FE200E734B4 /* TestAreaOneApp.swift */; };
 		26AA3EB528256FE200E734B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AA3EB428256FE200E734B4 /* ContentView.swift */; };
 		26AA3EB728256FE300E734B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26AA3EB628256FE300E734B4 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		2658A11F2843D71A00DDD6B6 /* TextB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextB.swift; sourceTree = "<group>"; };
 		26A5E7412843D3E90019CD3E /* TextA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextA.swift; sourceTree = "<group>"; };
+		26A65CF128F7E7B800C0BF3E /* HashableStructWithFuncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableStructWithFuncView.swift; sourceTree = "<group>"; };
 		26AA3EAF28256FE200E734B4 /* TestAreaOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAreaOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AA3EB228256FE200E734B4 /* TestAreaOneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAreaOneApp.swift; sourceTree = "<group>"; };
 		26AA3EB428256FE200E734B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		26A65CF028F7E77700C0BF3E /* HasableStructWithFunc */ = {
+			isa = PBXGroup;
+			children = (
+				26A65CF128F7E7B800C0BF3E /* HashableStructWithFuncView.swift */,
+			);
+			path = HasableStructWithFunc;
+			sourceTree = "<group>";
+		};
 		26AA3EA628256FE200E734B4 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		26AA3EB128256FE200E734B4 /* TestAreaOne */ = {
 			isa = PBXGroup;
 			children = (
+				26A65CF028F7E77700C0BF3E /* HasableStructWithFunc */,
 				26AA3EB228256FE200E734B4 /* TestAreaOneApp.swift */,
 				26AA3EB428256FE200E734B4 /* ContentView.swift */,
 				26A5E7402843D39C0019CD3E /* Text */,
@@ -281,6 +292,7 @@
 				26AA3EB528256FE200E734B4 /* ContentView.swift in Sources */,
 				26AC70982843E13200357926 /* TextC.swift in Sources */,
 				26C5D1DD2827B9DC002BCA29 /* SearchItemView.swift in Sources */,
+				26A65CF228F7E7B800C0BF3E /* HashableStructWithFuncView.swift in Sources */,
 				26AA3ED72825DF6E00E734B4 /* SearchItemsViewModel.swift in Sources */,
 				26AA3ECB2825967E00E734B4 /* Color+dna.swift in Sources */,
 				26AA3ED12825987C00E734B4 /* View+if.swift in Sources */,
