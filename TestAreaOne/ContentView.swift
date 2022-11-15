@@ -44,7 +44,7 @@ struct ContentView: View {
 
                 NavigationLink(destination: TextAView()) {
                     createTestAreaOneListItem(
-                        title: "Text A",
+                        title: "Text X",
                         systemName: "text.bubble",
                         description: "part of a test"
                     )
@@ -60,7 +60,7 @@ struct ContentView: View {
 
                 NavigationLink(destination: TextBView()) {
                     createTestAreaOneListItem(
-                        title: "Bad 1",
+                        title: "Text X",
                         systemName: "text.bubble",
                         description: "bad 1"
                     )
@@ -68,7 +68,7 @@ struct ContentView: View {
 
                 NavigationLink(destination: TextBView()) {
                     createTestAreaOneListItem(
-                        title: "Text Y",
+                        title: "Text X",
                         systemName: "text.bubble",
                         description: "cherry pick 2"
                     )
@@ -76,7 +76,7 @@ struct ContentView: View {
 
                 NavigationLink(destination: TextBView()) {
                     createTestAreaOneListItem(
-                        title: "Text B",
+                        title: "Text X",
                         systemName: "text.bubble",
                         description: "part of a test"
                     )
@@ -84,7 +84,7 @@ struct ContentView: View {
 
                 NavigationLink(destination: TextEView()) {
                     createTestAreaOneListItem(
-                        title: "Text E",
+                        title: "Text X",
                         systemName: "text.bubble",
                         description: "part of a test"
                     )
