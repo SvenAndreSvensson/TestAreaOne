@@ -44,7 +44,7 @@ struct ContentView: View {
 
                 NavigationLink(destination: TextAView()) {
                     createTestAreaOneListItem(
-                        title: "Text X",
+                        title: "Text A",
                         systemName: "text.bubble",
                         description: "part of a test"
                     )
@@ -52,7 +52,7 @@ struct ContentView: View {
 
                 NavigationLink(destination: TextBView()) {
                     createTestAreaOneListItem(
-                        title: "Text X",
+                        title: "Text A",
                         systemName: "text.bubble",
                         description: "Cherry pick"
                     )
